@@ -29,12 +29,12 @@ public class shopmanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void nextscene()
     {
-        SceneManager.LoadScene("playing");
+        SceneManager.LoadScene("Game");
     }
 
     public void opensetting()
@@ -48,7 +48,7 @@ public class shopmanager : MonoBehaviour
         setpanel.SetActive(false);
         Time.timeScale = 1f;
     }
-    
+
     public void setvolume(float value)
     {
         bgm.volume = value;
@@ -60,7 +60,7 @@ public class shopmanager : MonoBehaviour
         data.ingreds_data isexist = data.inbag.Find(x => x.name == item);
         if (isexist != null)
         {
-            isexist.quantity ++;
+            isexist.quantity++;
             GameObject numup = pool.pool.Find(obj => obj.GetComponent<ingredient>().thename == item);
             if (numup != null)
                 numup.GetComponent<ingredient>().updatenum(isexist.quantity);
@@ -68,7 +68,7 @@ public class shopmanager : MonoBehaviour
         else
         {
             data.inbag.Add(new data.ingreds_data(item));
-        
+
             GameObject uiObj = pool.GetObject();
             uiObj.GetComponent<ingredient>().setingredient(item, 1);
         }

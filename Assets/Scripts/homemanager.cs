@@ -35,7 +35,7 @@ public class homemanager : MonoBehaviour
 
     public void nextscene()
     {
-        SceneManager.LoadScene("shopping");
+        SceneManager.LoadScene("Shopping");
     }
 
     public void opensetting()
