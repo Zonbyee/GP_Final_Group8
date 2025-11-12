@@ -1,0 +1,759 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Kiwi" at "2025-11-08T17:17:05.9690533Z"
+Built from '6000.2/respin/6000.2.8f1-e4064264ae96' branch; Version is '6000.2.8f1 (c9992ac36c34) revision 13211946'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'zh' Physical Memory: 32397 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2025-11-08T17:17:05Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.2.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker12
+-projectPath
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 22492, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+D:/Unity/FinalProject
+-logFile
+Logs/AssetImportWorker12.log
+-srvPort
+[Licensing::Module] LicensingClient has failed validation; ignoring
+53432
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: D:/Unity/FinalProject
+D:/Unity/FinalProject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.17.2'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Kiwi"
+[Licensing::IpcConnector] LicenseClient-Kiwi channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Kiwi-6000.2.8" at "2025-11-08T17:17:06.0700288Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 57724, path: "C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+Player connection [39564]  Target information:
+
+Player connection [39564]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1589633824 [EditorId] 1589633824 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-8SK0S7FT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [39564]  * "[IP] 192.168.80.1 [Port] 0 [Flags] 2 [Guid] 1589633824 [EditorId] 1589633824 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-8SK0S7FT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [39564]  * "[IP] 192.168.1.153 [Port] 0 [Flags] 2 [Guid] 1589633824 [EditorId] 1589633824 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-8SK0S7FT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.2+ff71f16
+  Session Id:              fd4d2023dcbc45a6a77d980fa050b64a
+  Correlation Id:          9b34143d4d6c9cc99f9e9d888a52990c
+  External correlation Id: 593812670628744882
+  Machine Id:              5InASzeaCtF81u6vwEa9ChkoEEI=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Kiwi-6000.2.8" (connect: 0.00s, validation: 0.00s, handshake: 0.02s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Kiwi-6000.2.8-notifications" at "2025-11-08T17:17:06.091814Z"
+[Licensing::Module] Licensing Background thread has ended after 0.12s
+Player connection [39564] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [39564] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 4.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.2.8f1 (c9992ac36c34)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/FinalProject/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 5060 Laptop GPU (ID=0x2d19)
+    Vendor:   NVIDIA
+    VRAM:     7810 MB
+    Driver:   32.0.15.7703
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: ewogICJzdWJzR3JvdXAiIDogInVuaXR5IGVkaXRvciIsCiAgIm5hbWVzcGFjZSIgOiAidW5pdHlfZWRpdG9yIiwKICAidHlwZSIgOiAiRURJVE9SIiwKICAidGFnIiA6ICJVbml0eVBlcnNvbmFsXXXX
+  Product: Unity Personal Version
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Registered in 0.007033 seconds.
+- Loaded All Assemblies, in  0.544 seconds
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 450 ms
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.083 seconds
+Domain Reload Profiling: 1625ms
+	BeginReloadAssembly (207ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (205ms)
+		LoadAssemblies (206ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (198ms)
+			TypeCache.Refresh (196ms)
+				TypeCache.ScanAssembly (181ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1084ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1012ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (588ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (109ms)
+			ProcessInitializeOnLoadAttributes (218ms)
+			ProcessInitializeOnLoadMethodAttributes (90ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  0.948 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.871 seconds
+Domain Reload Profiling: 1817ms
+	BeginReloadAssembly (267ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (26ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (539ms)
+		LoadAssemblies (405ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (275ms)
+			TypeCache.Refresh (210ms)
+				TypeCache.ScanAssembly (194ms)
+			BuildScriptInfoCaches (47ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (871ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (655ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (143ms)
+			ProcessInitializeOnLoadAttributes (426ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6130 unused Assets / (4.3 MB). Loaded Objects now: 6841.
+Memory consumption went from 140.8 MB to 136.6 MB.
+Total: 10.011200 ms (FindLiveObjects: 0.723700 ms CreateObjectMapping: 0.564200 ms MarkObjects: 6.353800 ms  DeleteObjects: 2.365000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 555940.152148 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Misc/Stand
+  artifactKey: Guid(9dc2189adad83c14483d491dd795d1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Misc/Stand using Guid(9dc2189adad83c14483d491dd795d1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87b70fdb6d231736dfb74ce47d978aa4') in 0.0090458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.108673 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Misc/Stand/Air Conditioner 1.prefab
+  artifactKey: Guid(fb2dd58fb1bda704ca494b9d8bc8d818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Misc/Stand/Air Conditioner 1.prefab using Guid(fb2dd58fb1bda704ca494b9d8bc8d818) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '813302702549d20c8af09efc3f9f26c0') in 0.7082218 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Misc/Stand/Stand.prefab
+  artifactKey: Guid(2b2756c6169f19549832afcf45441a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Misc/Stand/Stand.prefab using Guid(2b2756c6169f19549832afcf45441a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dab331615745e37b120845adb5e3a185') in 0.0282551 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Misc/Stand/Speaker 2.prefab
+  artifactKey: Guid(93f2e172ff93b5f4cbe5c37f60797ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Misc/Stand/Speaker 2.prefab using Guid(93f2e172ff93b5f4cbe5c37f60797ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'da4877132fc8fb8f412b441e6fd57d1d') in 0.0287855 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.553357 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Clock & Alarms/Alarm Clock.prefab
+  artifactKey: Guid(18abd4e97560a0b4a848e092c3f730b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Clock & Alarms/Alarm Clock.prefab using Guid(18abd4e97560a0b4a848e092c3f730b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9db52c3db81e3990a8a61139b79a826e') in 0.0483167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Clock & Alarms/Wall Clock 1.prefab
+  artifactKey: Guid(091cb45d5c01abb4ead9ded8a2ed6df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Clock & Alarms/Wall Clock 1.prefab using Guid(091cb45d5c01abb4ead9ded8a2ed6df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1eb0a746dc952282f4cc1216274738f') in 0.0394713 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Clock & Alarms/Fire Alarm.prefab
+  artifactKey: Guid(bdef53ec9f0d5b54c86bfb80b6414db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Clock & Alarms/Fire Alarm.prefab using Guid(bdef53ec9f0d5b54c86bfb80b6414db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1e8cb2a9640cf6294e193f46e9e058d7') in 0.0388774 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Clock & Alarms/Wall Clock 3.prefab
+  artifactKey: Guid(8e1703ece8cd92e4090cb53b7deefb70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Clock & Alarms/Wall Clock 3.prefab using Guid(8e1703ece8cd92e4090cb53b7deefb70) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4580da5073964a16103cac234dd70464') in 0.0379852 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 42
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.514792 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Bucket-like/Trash Can 2.prefab
+  artifactKey: Guid(50214f66d7f706245812ea106214b584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Bucket-like/Trash Can 2.prefab using Guid(50214f66d7f706245812ea106214b584) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b03a8955f1bbed4bce4073fc55568707') in 0.0359675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.181085 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Bowls & Cups/Cup 4.prefab
+  artifactKey: Guid(4e434855983b272418bd97c39cc6b811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Prefabs/Bowls & Cups/Cup 4.prefab using Guid(4e434855983b272418bd97c39cc6b811) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa9760baccd7cf99035c09368b5f343f') in 0.0317114 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 267.597735 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Piano Rug.fbx
+  artifactKey: Guid(cd59867ba00a25b42929f6c7e545f4a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Piano Rug.fbx using Guid(cd59867ba00a25b42929f6c7e545f4a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4eed944bc8a97c8fcaeec8b7342f725d') in 0.3638532 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Picture Frame 3.fbx
+  artifactKey: Guid(838f15c7637e52346a33f645c2612f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Picture Frame 3.fbx using Guid(838f15c7637e52346a33f645c2612f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '74805df0d81aa67eb42a71d093a44ddd') in 0.0847146 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Picture Frame 7.fbx
+  artifactKey: Guid(5fd4a902f2118f44bb157457274a982e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Picture Frame 7.fbx using Guid(5fd4a902f2118f44bb157457274a982e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a652cf21032ba5f0bfa50debd76a6b93') in 0.0978249 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Picture Frame 6.fbx
+  artifactKey: Guid(931979a3ab683c442afba550be2165f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Picture Frame 6.fbx using Guid(931979a3ab683c442afba550be2165f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67c2ec9e1ec180ccbfa9e2420dba5914') in 0.0769663 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 1.fbx
+  artifactKey: Guid(b2917157f7fad8348851876f085af6da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 1.fbx using Guid(b2917157f7fad8348851876f085af6da) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9f86beec8d1ee0d743589b7b34cd2270') in 0.0631888 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 10.fbx
+  artifactKey: Guid(db17bbd3b2c2c88489c680429ce6a591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 10.fbx using Guid(db17bbd3b2c2c88489c680429ce6a591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'af525a4307f2e0d8335ca28d1e2f8c73') in 0.0625799 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 16.fbx
+  artifactKey: Guid(58ca7cd138925a64ba86f2f84a31a31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 16.fbx using Guid(58ca7cd138925a64ba86f2f84a31a31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '46bc6cb805abd98a9e9722bb5559eff0') in 0.0675656 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 8.fbx
+  artifactKey: Guid(9a35da2cbbb58974a8e78bd22da2115d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 8.fbx using Guid(9a35da2cbbb58974a8e78bd22da2115d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87da432502b7850788a70e1bec7e921e') in 0.0540011 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 4.fbx
+  artifactKey: Guid(7ae7c9a2709bfa748877959dbfd4c919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 4.fbx using Guid(7ae7c9a2709bfa748877959dbfd4c919) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b8e8edd6a3bc03c6c3f0a79d0c4bdedb') in 0.0579021 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 5.fbx
+  artifactKey: Guid(6031ad578e316f6439850260ea84f2ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 5.fbx using Guid(6031ad578e316f6439850260ea84f2ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '40badbbeadefee9f11d29d02e5b5644f') in 0.0708655 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 15.fbx
+  artifactKey: Guid(1b0f30a0e5e59534dac2615536a33ef5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 15.fbx using Guid(1b0f30a0e5e59534dac2615536a33ef5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e9df69cd1f3fcd2d2eba66a3ac678fc') in 0.0731444 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Picture Frame 9.fbx
+  artifactKey: Guid(ab59f6d1a6b53234a8d523f5d13d9ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Picture Frame 9.fbx using Guid(ab59f6d1a6b53234a8d523f5d13d9ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8da754ca1ed99e23c567958ec20bc8d0') in 0.089937 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 12.fbx
+  artifactKey: Guid(c38d8eee32862e440bb5a5a05ce9c433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Pillow 12.fbx using Guid(c38d8eee32862e440bb5a5a05ce9c433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '60a9e55795a0675f16c0981652f43478') in 0.0640177 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.231940 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Stand Mirror.fbx
+  artifactKey: Guid(3ad65a525bbfa664a99d909f3ee994b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Stand Mirror.fbx using Guid(3ad65a525bbfa664a99d909f3ee994b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ae4e6d799666d6dc0fc39370e2d129b3') in 0.0700896 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Box 2.fbx
+  artifactKey: Guid(ade93b8db23f0d4429b8df60f7164e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Box 2.fbx using Guid(ade93b8db23f0d4429b8df60f7164e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'af3d550638848a79ac5b01bcba105733') in 0.1698657 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Rack 1.fbx
+  artifactKey: Guid(6d1e1e3bcc67c43459c39132c93a1057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Rack 1.fbx using Guid(6d1e1e3bcc67c43459c39132c93a1057) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd20ba9a13133cb30900e05cc4859dd9c') in 0.055824 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Rack 3.fbx
+  artifactKey: Guid(4f4640e4819b4064d9cf33f53d48e9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Rack 3.fbx using Guid(4f4640e4819b4064d9cf33f53d48e9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0307847142497ed3640eee771be0cdfa') in 0.0576368 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Stool 3.fbx
+  artifactKey: Guid(3553d0947cdde7b44b99ee14ca5396bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Stool 3.fbx using Guid(3553d0947cdde7b44b99ee14ca5396bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa1873a78e6bd837e24abda497989f77') in 0.0583682 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Box 1.fbx
+  artifactKey: Guid(67745d99cf9c7f64c935beb693060c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Box 1.fbx using Guid(67745d99cf9c7f64c935beb693060c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '39744144784fe66d9419c0b3f75f20c3') in 0.0707619 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Rack 2.fbx
+  artifactKey: Guid(f7e7f099fb8db9b4abdd51fae512c95a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Rack 2.fbx using Guid(f7e7f099fb8db9b4abdd51fae512c95a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '930d5ce96c8eaff4e4894409cd45e1ea') in 0.0402592 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.759551 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Rack 4.fbx
+  artifactKey: Guid(bf50067c13491734c9357a8a859bd344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Rack 4.fbx using Guid(bf50067c13491734c9357a8a859bd344) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '83293e3539db8f7af220ee9c263f03f9') in 0.1087174 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Shelf.fbx
+  artifactKey: Guid(5cf6d6299a627664dab8dd5d1a876406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Storage Shelf.fbx using Guid(5cf6d6299a627664dab8dd5d1a876406) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f0c3ad1e3f507a9db4972e4dddc3b616') in 0.1338048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 36
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Table 4.fbx
+  artifactKey: Guid(8db6ef360d7092b4f871e9a0dc48ef74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Table 4.fbx using Guid(8db6ef360d7092b4f871e9a0dc48ef74) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a61ad7e7912d1b953ce2316b2e976736') in 0.0533088 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Table 1.fbx
+  artifactKey: Guid(f7edf820313b87747b5664464476116a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Table 1.fbx using Guid(f7edf820313b87747b5664464476116a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f4dd91a4bef882b80e52cfded7e94281') in 0.0609659 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Stove.fbx
+  artifactKey: Guid(d408c60c4bd278f41b6dbf5417617eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Stove.fbx using Guid(d408c60c4bd278f41b6dbf5417617eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c86c56027806cddb3bd157decfdf1043') in 0.2080045 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 47
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Sunglasses.fbx
+  artifactKey: Guid(457d0df8acaf3084880c22e564cab6a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Sunglasses.fbx using Guid(457d0df8acaf3084880c22e564cab6a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '189b0c61f3893206e91f00feb90167fc') in 0.1496505 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.559935 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Table 6.fbx
+  artifactKey: Guid(2820147db087d7f4fa760fbe3c686d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Table 6.fbx using Guid(2820147db087d7f4fa760fbe3c686d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ae63d7511d19753c4862ed7a8de3af7f') in 0.1010789 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Table Lamp 3.fbx
+  artifactKey: Guid(936f1e46b2ffa10448213ca5afd85a65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Table Lamp 3.fbx using Guid(936f1e46b2ffa10448213ca5afd85a65) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f777f2c2f2974fadba5dc92b6cb1fd78') in 0.0718712 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tea Tray.fbx
+  artifactKey: Guid(a5248ecf5aa3cd64bbadc9b13b8eaba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tea Tray.fbx using Guid(a5248ecf5aa3cd64bbadc9b13b8eaba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '231fc8f43119d3df388127221cfd2c5b') in 0.0494359 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tall Stool.fbx
+  artifactKey: Guid(eec4c83a62ea3ff4680e077ac0ded4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tall Stool.fbx using Guid(eec4c83a62ea3ff4680e077ac0ded4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7e9d253dd3c70b1315befd0a32dd38c4') in 0.0444499 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tea Tin.fbx
+  artifactKey: Guid(ba2d60b7a7ad3204d93d0b78ab51d683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tea Tin.fbx using Guid(ba2d60b7a7ad3204d93d0b78ab51d683) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9cfbe55d0beb22790ab9ecef8d0b048c') in 0.0586115 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tank Top 1.fbx
+  artifactKey: Guid(58e0f6641b3e01d429eaae8b5ddf259b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tank Top 1.fbx using Guid(58e0f6641b3e01d429eaae8b5ddf259b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7086bc99aacebcb35d5c9380fcc66e16') in 0.0676255 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tank Top 4.fbx
+  artifactKey: Guid(e289d3f1e687f834e9bc2acd2d33d331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tank Top 4.fbx using Guid(e289d3f1e687f834e9bc2acd2d33d331) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '196fbada65d44bc11d7c4f29e8c25187') in 0.0531835 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.668628 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Telephone.fbx
+  artifactKey: Guid(65fa8cf14eb9faf428cd1d6604473086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Telephone.fbx using Guid(65fa8cf14eb9faf428cd1d6604473086) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '36d35f3463ec3618522dc607404d6fd4') in 0.1391959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toilet 2.fbx
+  artifactKey: Guid(7e0f31e35b1c1ed43b05a048e41867b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toilet 2.fbx using Guid(7e0f31e35b1c1ed43b05a048e41867b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c08020921d58001aeccc4dd4d35c808a') in 0.0989559 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Temp.prefab
+  artifactKey: Guid(60130cbe92dece54c99322aae39f1dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Temp.prefab using Guid(60130cbe92dece54c99322aae39f1dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '608403763c9c31b4a57772d40115759b') in 0.0319166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toilet 3.fbx
+  artifactKey: Guid(31be93aae25f29a43b0f2ce5ae63b0bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toilet 3.fbx using Guid(31be93aae25f29a43b0f2ce5ae63b0bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e7ac0b20fb01b4fb20bef1ec3b6ca23e') in 0.0969265 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Television 2.fbx
+  artifactKey: Guid(2edf45ec33395df4ab62a43af5f93cdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Television 2.fbx using Guid(2edf45ec33395df4ab62a43af5f93cdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e773bb7a0c1c5e3929154828a561f783') in 0.0589049 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Thermos Flask.fbx
+  artifactKey: Guid(7c5319ca71bf0da48aa1ad944e82e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Thermos Flask.fbx using Guid(7c5319ca71bf0da48aa1ad944e82e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '291b7d9e4a1283798faaf03e610f3a4b') in 0.0724182 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Template Room.prefab
+  artifactKey: Guid(52668933aa651234eb430ad0384689c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Template Room.prefab using Guid(52668933aa651234eb430ad0384689c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9f1155b673e1b0841afefcaf19e28990') in 0.0380946 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.448831 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toilet Paper Holder 1.fbx
+  artifactKey: Guid(c90fb8e3078acb44c86069cac0d40145) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toilet Paper Holder 1.fbx using Guid(c90fb8e3078acb44c86069cac0d40145) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a01ae94b05913a0a80c402661d11cf0') in 0.0921558 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tooth Brush.fbx
+  artifactKey: Guid(81fc0155dce8ea347acc6a19afe70cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tooth Brush.fbx using Guid(81fc0155dce8ea347acc6a19afe70cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63118e1c78c3ce13123feb1d25ae5a3f') in 0.0562341 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trash Can 3.fbx
+  artifactKey: Guid(e28b12d247529284e959d0524f4711ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trash Can 3.fbx using Guid(e28b12d247529284e959d0524f4711ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd90cede11135079bf516ca0777ce29de') in 0.0735064 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trophy 1.fbx
+  artifactKey: Guid(5baf19836eeea8a4c831a962046219da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trophy 1.fbx using Guid(5baf19836eeea8a4c831a962046219da) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a64541e9410fd4913b4d116b560ff606') in 0.0530318 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Vase 1.fbx
+  artifactKey: Guid(c9b12c33b2883574ca627723502ca7f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Vase 1.fbx using Guid(c9b12c33b2883574ca627723502ca7f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0881ec7020f5f5785f218090bb1f2c79') in 0.0506435 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toothbrush.fbx
+  artifactKey: Guid(00a3d4b89e7cc154dac13316ccd0f3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toothbrush.fbx using Guid(00a3d4b89e7cc154dac13316ccd0f3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '93d58b05aaa6e59ba65e90fc80f5fdda') in 0.0901918 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tray.fbx
+  artifactKey: Guid(9541cf2906bf2164e8b5b276ec8fee3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Tray.fbx using Guid(9541cf2906bf2164e8b5b276ec8fee3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c1615408401e2d266e672c22ba1b9837') in 0.0683977 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trash Can 5.fbx
+  artifactKey: Guid(4c60cb4c431162c4dbc73bce8d1ceac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trash Can 5.fbx using Guid(4c60cb4c431162c4dbc73bce8d1ceac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'efebe81f4a14d5a2e210ff8715a0b266') in 0.0697085 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/TV Stand.fbx
+  artifactKey: Guid(80abf92e3f7aa02438ef021152853578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/TV Stand.fbx using Guid(80abf92e3f7aa02438ef021152853578) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4cd18f75a9129485f7a7829b078d216d') in 0.0676394 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toy Pickup Truck.fbx
+  artifactKey: Guid(93d27064014b66c40bca43e0997c670e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Toy Pickup Truck.fbx using Guid(93d27064014b66c40bca43e0997c670e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1a79c9530235ded6c27bf9a1f582d4a') in 0.1677482 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trash Can 2.fbx
+  artifactKey: Guid(e5aaf10a06123e14d9cbdeb3b29a8399) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trash Can 2.fbx using Guid(e5aaf10a06123e14d9cbdeb3b29a8399) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '77c91367193d2368cde9782b38a16c80') in 0.0731747 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Track Light.fbx
+  artifactKey: Guid(be31740cd01bf4d4aab4085e956f25bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Track Light.fbx using Guid(be31740cd01bf4d4aab4085e956f25bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bc8e2b7db036fe6519bdd80b403be09c') in 0.2072568 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 44
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Triangular Chocolate.fbx
+  artifactKey: Guid(136b80d5f530a294bac206256193ef41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Triangular Chocolate.fbx using Guid(136b80d5f530a294bac206256193ef41) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '19c9d5f1ddf77f99a55a409c227ac28d') in 0.0823108 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trash Can 7.fbx
+  artifactKey: Guid(ebef808fe3d5e2247b3ac2cbee13fcb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trash Can 7.fbx using Guid(ebef808fe3d5e2247b3ac2cbee13fcb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fd715594326cc531f4309be655bff7be') in 0.0697626 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trophy 2.fbx
+  artifactKey: Guid(4126b919b2da70d4398216140c35c804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fries and Seagull/Ultimate Interior Pack/Models/Trophy 2.fbx using Guid(4126b919b2da70d4398216140c35c804) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '45031bf45f8c8ce73f6e8285b31c4cc7') in 0.0643509 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

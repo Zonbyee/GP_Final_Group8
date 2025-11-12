@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
+<<<<<<< HEAD
   productGUID: 3f86a24ef381b4642b0f5d91fcf3f270
+=======
+  productGUID: cd26371228aceea4da4be8c992137588
+>>>>>>> fc990544 (card)
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +17,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: final
+=======
+  productName: FinalProject
+>>>>>>> fc990544 (card)
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -844,14 +852,22 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
   metroPackageName: final
+=======
+  metroPackageName: FinalProject
+>>>>>>> fc990544 (card)
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
   metroApplicationDescription: final
+=======
+  metroApplicationDescription: FinalProject
+>>>>>>> fc990544 (card)
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -920,6 +936,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
+<<<<<<< HEAD
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: e6e3c04a-cf2a-4181-b853-8f5bf70e8c7f
@@ -927,6 +944,15 @@ PlayerSettings:
   qualitySettingsNames: []
   projectName: final
   organizationId: zonbyee
+=======
+  activeInputHandler: 1
+  windowsGamepadBackendHint: 0
+  cloudProjectId: b748a7ea-8a5f-47ae-9f4c-b726e2ba8937
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: FinalProject
+  organizationId: kiwichen728
+>>>>>>> fc990544 (card)
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
