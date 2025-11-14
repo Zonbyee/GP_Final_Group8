@@ -12,7 +12,9 @@ public class shopmanager : MonoBehaviour
     public AudioSource bgm;
     public GameObject setpanel;
     public GameObject buypanel;
+    public TextMeshProUGUI itemNameText;
     public bagpool pool;
+
 
     private string nowbuyingitem;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -60,6 +62,7 @@ public class shopmanager : MonoBehaviour
         data.setnowprise(itname);
         itemprise.text = "$ " + data.nowprise;
         nowbuyingitem = itname;
+        itemNameText.text = itname;
     }
 
     public void closebuy()
