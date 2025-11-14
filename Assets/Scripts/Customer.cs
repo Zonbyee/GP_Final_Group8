@@ -9,8 +9,29 @@ public class Customer : MonoBehaviour
     private CustomerSpot targetSpot;
     private bool hasArrived = false;
 
+    public GameObject burgerRecipeUI;
+    public GameObject salmonRecipeUI;
+
+    private int expectedMealIndex = -1;
+
+
+
+
     private bool isLeaving = false;
     private CustomerSpot assignedSpot;  // ⭐ 修正：加入編號的 spot reference
+    private FoodArea myFoodArea;
+
+    public void SetFoodArea(FoodArea area)
+    {
+        myFoodArea = area;
+    }
+
+    public void SetExpectedMeal(int mealIndex)
+    {
+        expectedMealIndex = mealIndex;
+    }
+
+
 
     void Awake()
     {
@@ -65,13 +86,41 @@ public class Customer : MonoBehaviour
         hasArrived = true;
         Debug.Log("Customer reached spot: " + targetSpot.name);
         targetSpot.OnCustomerArrived();
+
+        ShowCorrectRecipe();
     }
+
+    private void ShowCorrectRecipe()
+    {
+        // 關閉全部（安全防呆）
+        if (burgerRecipeUI != null) burgerRecipeUI.SetActive(false);
+        if (salmonRecipeUI != null) salmonRecipeUI.SetActive(false);
+
+        // 根據餐點顯示
+        if (expectedMealIndex == 0)
+        {
+            // 顧客想吃漢堡
+            if (burgerRecipeUI != null) burgerRecipeUI.SetActive(true);
+        }
+        else if (expectedMealIndex == 1)
+        {
+            // 顧客想吃鮭魚香菇三明治
+            if (salmonRecipeUI != null) salmonRecipeUI.SetActive(true);
+        }
+
+        Debug.Log($"[Customer] 顯示餐點食譜 → Index: {expectedMealIndex}");
+    }
+
 
     // -------------------------------
     //          上菜判斷
     // -------------------------------
     public void OnFoodServed(bool isCorrect)
     {
+        if (burgerRecipeUI != null) burgerRecipeUI.SetActive(false);
+        if (salmonRecipeUI != null) salmonRecipeUI.SetActive(false);
+
+        
         if (isCorrect)
         {
             Debug.Log("[Customer] 食物正確 → 開始吃...");
@@ -80,6 +129,9 @@ public class Customer : MonoBehaviour
         {
             Debug.Log("[Customer] 食物錯誤 → 客人還是會離開");
         }
+
+        
+
 
         // ⭐ 食完後等 5 秒離開
         StartCoroutine(LeaveAfterDelay());
@@ -93,6 +145,15 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         Debug.Log("[Customer] 用餐完畢 → 客人準備離開");
+
+        // ⭐ 食完後 → 清除桌上的食物
+        if (myFoodArea != null)
+        {
+            myFoodArea.ClearFoodOnTable();
+            myFoodArea.ClearCustomer();   // 讓 FoodArea 空出來
+            myFoodArea = null;
+        }
+
 
         // ⭐ 先釋放座位
         if (assignedSpot != null)
@@ -116,6 +177,7 @@ public class Customer : MonoBehaviour
         agent.SetDestination(leavePos);
         isLeaving = true;
     }
+
 
     // -------------------------------
     // 保險：物件銷毀時釋放座位

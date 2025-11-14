@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
@@ -14,6 +14,9 @@ public class FoodArea : MonoBehaviour, IDropHandler
     }
     public List<FoodPrefab> prefabList;
     private Dictionary<string, GameObject> prefabDict;
+    private GameObject newFood = null;
+
+
 
     void Start()
     {
@@ -27,6 +30,12 @@ public class FoodArea : MonoBehaviour, IDropHandler
     {
         currentCustomer = customer;
         this.expectedMealIndex = expectedMealIndex;
+
+        if (customer != null)
+        {
+            customer.SetFoodArea(this);  // ⭐非常重要：綁定「顧客 ↔ 食物區」
+            customer.SetExpectedMeal(expectedMealIndex);   // ⭐ 傳給 Customer
+        }
     }
     public void ClearCustomer()
     {
@@ -45,8 +54,11 @@ public class FoodArea : MonoBehaviour, IDropHandler
         }
 
         Quaternion desiredRotation = Quaternion.identity;
-        GameObject newFood = Instantiate(prefabToUse, desiredPosition, desiredRotation);
+        newFood = Instantiate(prefabToUse, desiredPosition, desiredRotation);
         Debug.Log($"[FoodArea] 放入上菜區：{card.foodName}");
+
+
+
 
         // 拿到食物的名稱後刪除卡片
         string foodName = card.foodName;
@@ -73,4 +85,22 @@ public class FoodArea : MonoBehaviour, IDropHandler
             Debug.LogWarning("[FoodArea] 沒有正在服務的客人！");
         }
     }
+
+    public void ClearFoodOnTable()
+    {
+        Debug.Log("[FoodArea] ClearFoodOnTable 被呼叫");
+
+        if (newFood != null)
+        {
+            Debug.Log($"[FoodArea] 銷毀 {newFood.name}");
+            Destroy(newFood);
+            newFood = null;
+        }
+        else
+        {
+            Debug.Log("[FoodArea] 桌上沒有食物可清除");
+        }
+    }
+
+
 }
