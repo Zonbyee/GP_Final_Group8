@@ -3,7 +3,7 @@ using UnityEngine;
 public class CustomerSpot : MonoBehaviour
 {
     private bool isOccupied = false;
-    private Customer currentCustomer;
+    public Customer currentCustomer;
     
     public bool IsOccupied => isOccupied;
     
