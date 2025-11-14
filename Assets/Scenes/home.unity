@@ -584,7 +584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71449711c0cbc8b4c8d080c1e3479325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::homemanager
-  show: {fileID: 2111579372}
   slider: {fileID: 127172189}
   bgm: {fileID: 323841619}
   setpanel: {fileID: 2034382866}
@@ -2283,7 +2282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2111579371
 RectTransform:
   m_ObjectHideFlags: 0
