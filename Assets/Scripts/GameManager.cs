@@ -7,9 +7,13 @@ public class GameManager : MonoBehaviour
 {
     private float timer = 60f;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI moneyText;
     void Start()
     {
-
+        if (moneyText != null)
+        {
+            moneyText.text = "$ " + data.money;  // <-- 開始時顯示
+        }
     }
 
     // Update is called once per frame
@@ -19,6 +23,11 @@ public class GameManager : MonoBehaviour
         if (timerText != null)
         {
             timerText.text = Mathf.Ceil(timer).ToString() + "s";
+        }
+
+        if (moneyText != null)
+        {
+            moneyText.text = "$ " + data.money;   // <-- 持續顯示金錢
         }
 
         if (timer <= 0f)

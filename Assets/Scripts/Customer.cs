@@ -123,14 +123,23 @@ public class Customer : MonoBehaviour
         
         if (isCorrect)
         {
+            Debug.Log("[Customer] 食物正確 → +200 元");
+            data.money += 200;
             Debug.Log("[Customer] 食物正確 → 開始吃...");
         }
         else
         {
-            Debug.Log("[Customer] 食物錯誤 → 客人還是會離開");
+            Debug.Log("[Customer] 食物錯誤 → -100 元");
+            data.money -= 100;
+            if (data.money < 0) data.money = 0;
+                Debug.Log("[Customer] 食物錯誤 → 客人還是會離開");
         }
 
-        
+        GameManager gm = FindAnyObjectByType<GameManager>();
+        if (gm != null && gm.moneyText != null)
+        {
+            gm.moneyText.text = "$ " + data.money;
+        }
 
 
         // ⭐ 食完後等 5 秒離開
