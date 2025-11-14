@@ -47,7 +47,15 @@ public class CustomerSpot : MonoBehaviour
     /// 產生客人的訂單（0~maxMealIndex）
     private void GenerateMealRequest()
     {
-        wantedMeal = Random.Range(0, maxMealIndex + 1);
+        float weightBurger = 0.8f;   // 80%
+        float weightSandwich = 0.2f; // 20%
+
+        float r = Random.value;   // 0 ~ 1 的隨機數
+
+        if (r < weightBurger)
+            wantedMeal = 0;              // 漢堡
+        else
+            wantedMeal = 1;              // 鮭魚香菇三明治
 
         Debug.Log($"[CustomerSpot] 客人需求餐點編號：{wantedMeal}");
 

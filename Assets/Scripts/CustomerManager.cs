@@ -20,6 +20,7 @@ public class CustomerManager : MonoBehaviour
     private float spawnTimer = 0f;
 
     private bool isFull = false;   // ⭐ 是否滿座
+    
 
     private void Awake()
     {
