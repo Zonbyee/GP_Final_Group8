@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public static class data
 {
-    public static string[] ingredname = { "burgerbun", "sandwich", "mushroom", "cheese", "salmon", "lettuce", "beef", "pork" };
+    public static string[] ingredname = {"burgerbun", "sandwich", "mushroom", "cheese", "salmon", "lettuce", "beef", "pork"};
     public class ingreds_data
     {
         public string name;
@@ -28,30 +28,30 @@ public static class data
 
     public static void setnowprise(string ss)
     {
-        switch (ss)
+        switch(ss)
         {
-            case "burgerbun":
+            case "burgerbun" :
                 nowprise = 20;
                 break;
-            case "sandwich":
+            case "sandwich" :
                 nowprise = 25;
                 break;
-            case "mushroom":
+            case "mushroom" :
                 nowprise = 35;
                 break;
-            case "cheese":
+            case "cheese" :
                 nowprise = 40;
                 break;
-            case "salmon":
+            case "salmon" :
                 nowprise = 60;
                 break;
-            case "lettuce":
+            case "lettuce" :
                 nowprise = 15;
                 break;
-            case "beef":
+            case "beef" :
                 nowprise = 70;
                 break;
-            case "pork":
+            case "pork" :
                 nowprise = 50;
                 break;
         }
