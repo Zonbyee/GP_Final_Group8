@@ -1,11 +1,11 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Customer : MonoBehaviour
 {
     private NavMeshAgent agent;
-
     private CustomerSpot targetSpot;
     private bool hasArrived = false;
 
@@ -14,12 +14,17 @@ public class Customer : MonoBehaviour
 
     private int expectedMealIndex = -1;
 
-
-
+    private Queue<Vector3> waypointQueue = new Queue<Vector3>();
+    private Vector3 finalDestination;
+    private bool isFollowingWaypoints = false;
 
     private bool isLeaving = false;
-    private CustomerSpot assignedSpot;  // ⭐ 修正：加入編號的 spot reference
+    private bool isPanicking = false;
+    private CustomerSpot assignedSpot;
     private FoodArea myFoodArea;
+
+    [Header("Leave Settings")]
+    public float leaveDistanceThreshold = 3.0f;
 
     public void SetFoodArea(FoodArea area)
     {
@@ -31,108 +36,134 @@ public class Customer : MonoBehaviour
         expectedMealIndex = mealIndex;
     }
 
+    public void SetPanicking(bool panicking)
+    {
+        isPanicking = panicking;
+    }
 
+    public bool IsPanicking()
+    {
+        return isPanicking;
+    }
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // -------------------------------
-    //   進場：走到指定 CustomerSpot
-    // -------------------------------
     public void SetDestination(CustomerSpot spot)
     {
         assignedSpot = spot;
         targetSpot = spot;
-
-        agent.SetDestination(spot.transform.position);
         spot.OccupySpot(this);
+        agent.SetDestination(spot.transform.position);
+    }
+
+    public void SetDestinationWithWaypoints(CustomerSpot spot, List<Vector3> waypoints)
+    {
+        assignedSpot = spot;
+        targetSpot = spot;
+        spot.OccupySpot(this);
+        finalDestination = spot.transform.position;
+
+        waypointQueue.Clear();
+        foreach (var waypoint in waypoints)
+        {
+            waypointQueue.Enqueue(waypoint);
+        }
+
+        if (waypointQueue.Count > 0)
+        {
+            isFollowingWaypoints = true;
+            Vector3 firstWaypoint = waypointQueue.Dequeue();
+            agent.SetDestination(firstWaypoint);
+        }
+        else
+        {
+            agent.SetDestination(finalDestination);
+        }
     }
 
     void Update()
     {
-        // =============================
-        // 抵達座位 (尚未抵達時才檢查)
-        // =============================
-        if (!isLeaving && !hasArrived && targetSpot != null)
+        if (isFollowingWaypoints)
+        {
+            bool shouldProceed = !agent.pathPending &&
+                               agent.remainingDistance <= agent.stoppingDistance + 0.5f &&
+                               (!agent.hasPath || agent.velocity.sqrMagnitude < 0.1f);
+
+            if (shouldProceed)
+            {
+                if (waypointQueue.Count > 0)
+                {
+                    Vector3 nextWaypoint = waypointQueue.Dequeue();
+                    agent.SetDestination(nextWaypoint);
+                }
+                else
+                {
+                    agent.SetDestination(finalDestination);
+                    isFollowingWaypoints = false;
+                }
+            }
+        }
+
+        if (!isLeaving && !hasArrived && targetSpot != null && !isFollowingWaypoints)
         {
             if (!agent.pathPending &&
                 agent.remainingDistance <= agent.stoppingDistance &&
-                (!agent.hasPath || agent.velocity.sqrMagnitude == 0f))
+                (!agent.hasPath || agent.velocity.sqrMagnitude < 0.1f))
             {
                 OnReachedSpot();
             }
         }
 
-        // =============================
-        // 離場：抵達 leave point
-        // =============================
-        if (isLeaving)
+        if (isLeaving && !isFollowingWaypoints)
         {
             if (!agent.pathPending &&
-                agent.remainingDistance <= 0.2f &&
-                (!agent.hasPath || agent.velocity.sqrMagnitude == 0f))
+                agent.remainingDistance <= leaveDistanceThreshold &&
+                (!agent.hasPath || agent.velocity.sqrMagnitude < 0.1f))
             {
-                Debug.Log("[Customer] 到達離開點 → 客人消失");
                 CustomerManager.Instance.RemoveCustomer(this);
             }
         }
     }
 
-    // 客人坐下時會被呼叫
     private void OnReachedSpot()
     {
         hasArrived = true;
-        Debug.Log("Customer reached spot: " + targetSpot.name);
+        Debug.Log($"[Customer] 已到達座位: {targetSpot.name}");
         targetSpot.OnCustomerArrived();
-
         ShowCorrectRecipe();
     }
 
     private void ShowCorrectRecipe()
     {
-        // 關閉全部（安全防呆）
         if (burgerRecipeUI != null) burgerRecipeUI.SetActive(false);
         if (salmonRecipeUI != null) salmonRecipeUI.SetActive(false);
 
-        // 根據餐點顯示
         if (expectedMealIndex == 0)
         {
-            // 顧客想吃漢堡
             if (burgerRecipeUI != null) burgerRecipeUI.SetActive(true);
         }
         else if (expectedMealIndex == 1)
         {
-            // 顧客想吃鮭魚香菇三明治
             if (salmonRecipeUI != null) salmonRecipeUI.SetActive(true);
         }
-
-        Debug.Log($"[Customer] 顯示餐點食譜 → Index: {expectedMealIndex}");
     }
 
-
-    // -------------------------------
-    //          上菜判斷
-    // -------------------------------
     public void OnFoodServed(bool isCorrect)
     {
         if (burgerRecipeUI != null) burgerRecipeUI.SetActive(false);
         if (salmonRecipeUI != null) salmonRecipeUI.SetActive(false);
 
-        
         if (isCorrect)
         {
-            Debug.Log("[Customer] 食物正確 → +200 元");
             data.money += 200;
-            Debug.Log("[Customer] 食物正確 → 開始吃...");
         }
         else
         {
-            Debug.Log("[Customer] 食物錯誤 → -100 元");
             data.money -= 100;
             if (data.money < 0) data.money = 0;
-                Debug.Log("[Customer] 食物錯誤 → 客人還是會離開");
         }
 
         GameManager gm = FindAnyObjectByType<GameManager>();
@@ -141,56 +172,59 @@ public class Customer : MonoBehaviour
             gm.moneyText.text = "$ " + data.money;
         }
 
-
-        // ⭐ 食完後等 5 秒離開
         StartCoroutine(LeaveAfterDelay());
     }
 
-    // -------------------------------
-    //    吃完飯 → 等 5 秒 → 離場
-    // -------------------------------
     private IEnumerator LeaveAfterDelay()
     {
         yield return new WaitForSeconds(5f);
 
-        Debug.Log("[Customer] 用餐完畢 → 客人準備離開");
-
-        // ⭐ 食完後 → 清除桌上的食物
         if (myFoodArea != null)
         {
             myFoodArea.ClearFoodOnTable();
-            myFoodArea.ClearCustomer();   // 讓 FoodArea 空出來
+            myFoodArea.ClearCustomer();
             myFoodArea = null;
         }
 
-
-        // ⭐ 先釋放座位
         if (assignedSpot != null)
         {
             assignedSpot.ReleaseSpot();
             assignedSpot = null;
-
-            // ⭐ 告訴 CustomerManager 座位空了，可以 spawn 新客人
             CustomerManager.Instance.NotifyCustomerLeft();
         }
 
-        // ⭐ 前往離開點
         CustomerManager.Instance.MoveCustomerToLeavePoint(this);
     }
 
-    // -------------------------------
-    //         設定離開路徑
-    // -------------------------------
     public void SetDestinationToLeavePoint(Vector3 leavePos)
     {
         agent.SetDestination(leavePos);
         isLeaving = true;
     }
 
+    public void SetDestinationToLeavePointWithWaypoints(Vector3 leavePos, List<Vector3> waypoints)
+    {
+        isLeaving = true;
+        finalDestination = leavePos;
 
-    // -------------------------------
-    // 保險：物件銷毀時釋放座位
-    // -------------------------------
+        waypointQueue.Clear();
+        foreach (var waypoint in waypoints)
+        {
+            waypointQueue.Enqueue(waypoint);
+        }
+
+        if (waypointQueue.Count > 0)
+        {
+            isFollowingWaypoints = true;
+            Vector3 firstWaypoint = waypointQueue.Dequeue();
+            agent.SetDestination(firstWaypoint);
+        }
+        else
+        {
+            agent.SetDestination(finalDestination);
+        }
+    }
+
     void OnDestroy()
     {
         if (assignedSpot != null)
