@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CustomerManager : MonoBehaviour
 {
@@ -97,6 +98,22 @@ public class CustomerManager : MonoBehaviour
         GiveKillReward(customerType);
 
         Destroy(customer.gameObject);
+
+        // Increment kill counter
+        data.killCountToday++;
+        Debug.Log($"[CustomerManager] Kill count today: {data.killCountToday}");
+
+        // Check if 3 kills reached - switch to Home scene
+        if (data.killCountYesterday + data.killCountToday >= 3)
+        {
+            Debug.Log("[CustomerManager] 3 kills reached! Resetting game data and switching to Home scene...");
+            data.money = 1000;
+            data.inbag.Clear();
+            data.killCountToday = 0;
+            data.killCountYesterday = 0;
+            SceneManager.LoadScene("Home");
+            return;
+        }
 
         TriggerPanicForOtherCustomers(spotIndex);
     }
