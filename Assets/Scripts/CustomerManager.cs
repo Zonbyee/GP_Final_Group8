@@ -101,6 +101,12 @@ public class CustomerManager : MonoBehaviour
         customer.PlayKillEffect();  // 自己做的效果
         // 然後不要 Destroy(customer) 了！
 
+        if (CameraShake.Instance != null)
+        {
+            CameraShake.Instance.ShakeOnce(0.2f, 0.2f);
+        }
+
+
         // Increment kill counter
         data.killCountToday++;
         Debug.Log($"[CustomerManager] Kill count today: {data.killCountToday}");
