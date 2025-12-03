@@ -2,14 +2,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     private float timer = 120f;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI moneyText;
+
+    [Header("Recipe")]
     public GameObject recipePanel;
     public Button recipeButton;
+    private RectTransform recipeRect;
+    public float slideDuration = 0.4f; // 動畫速度
+    public AutoFlip autoFlip;
+    public int recipeStartPage = 4;
+    public bool FirstTimeInGame = true;
+
     void Start()
     {
         // Reset kill counter at the start of each day
@@ -21,8 +30,17 @@ public class GameManager : MonoBehaviour
         {
             moneyText.text = "$ " + data.money;  // <-- 開始時顯示
         }
+
         if (recipePanel != null)
+        {
+            recipeRect = recipePanel.GetComponent<RectTransform>();
+
+            // 一開始放在螢幕下方
+            recipeRect.anchoredPosition = new Vector2(0, -Screen.height);
             recipePanel.SetActive(true);
+
+            StartCoroutine(SlideInRecipe());
+        }
     }
 
     // Update is called once per frame
@@ -50,20 +68,62 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // ---------------- 開啟動畫 ----------------
+
     public void OpenRecipe()
     {
-        if (recipePanel != null)
-        {
-            recipePanel.SetActive(true);
-        }
+        recipePanel.SetActive(true);
+        StartCoroutine(SlideInRecipe());
     }
 
-    // ⭐ 關閉食譜（給 UI 的 Close button 用）
+    IEnumerator SlideInRecipe()
+    {
+        if (autoFlip != null)
+            autoFlip.AutoFlipToPage(recipeStartPage);
+        Vector2 start = new Vector2(0, -Screen.height);
+        Vector2 end = Vector2.zero; // 回到中間
+
+        float t = 0;
+        while (t < slideDuration)
+        {
+            t += Time.deltaTime;
+            float p = t / slideDuration;
+
+            // ease-out 效果
+            p = 1 - Mathf.Pow(1 - p, 3);
+
+            recipeRect.anchoredPosition = Vector2.Lerp(start, end, p);
+            yield return null;
+        }
+
+        recipeRect.anchoredPosition = Vector2.zero;
+    }
+
+    // ---------------- 關閉動畫 ----------------
+
     public void CloseRecipe()
     {
-        if (recipePanel != null)
+        StartCoroutine(SlideOutRecipe());
+        Time.timeScale = 1f;
+    }
+
+    IEnumerator SlideOutRecipe()
+    {
+        Vector2 start = recipeRect.anchoredPosition;
+        Vector2 end = new Vector2(0, -Screen.height);
+
+        float t = 0;
+        while (t < slideDuration)
         {
-            recipePanel.SetActive(false);
+            t += Time.deltaTime;
+            float p = t / slideDuration;
+
+            // ease-in 效果
+            p = Mathf.Pow(p, 3);
+
+            recipeRect.anchoredPosition = Vector2.Lerp(start, end, p);
+            yield return null;
         }
+        recipePanel.SetActive(false);
     }
 }

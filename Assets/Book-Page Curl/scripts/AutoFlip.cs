@@ -10,6 +10,8 @@ public class AutoFlip : MonoBehaviour {
     public Book ControledBook;
     public int AnimationFramesCount = 40;
     bool isFlipping = false;
+    public GameManager gm;   // 直接拖進 Inspector
+
     // Use this for initialization
     void Start () {
         if (!ControledBook)
@@ -18,6 +20,40 @@ public class AutoFlip : MonoBehaviour {
             StartFlipping();
         ControledBook.OnFlip.AddListener(new UnityEngine.Events.UnityAction(PageFlipped));
 	}
+
+    public void AutoFlipToPage(int targetPage)
+    {
+        StartCoroutine(AutoFlipTo(targetPage));
+    }
+
+    IEnumerator AutoFlipTo(int targetPage)
+    {
+        yield return new WaitForEndOfFrame(); // 等 Book 初始化完成
+
+        if (targetPage > ControledBook.currentPage)
+        {
+            while (ControledBook.currentPage < targetPage)
+            {
+                FlipRightPage();
+                yield return new WaitForSeconds(PageFlipTime + TimeBetweenPages);
+            }
+        }
+        else if (targetPage < ControledBook.currentPage)
+        {
+            while (ControledBook.currentPage > targetPage)
+            {
+                FlipLeftPage();
+                yield return new WaitForSeconds(PageFlipTime + TimeBetweenPages);
+            }
+        }
+
+        if (gm.FirstTimeInGame)
+        {
+            Time.timeScale = 0f;
+            gm.FirstTimeInGame = false;
+        }
+    }
+
     void PageFlipped()
     {
         isFlipping = false;
