@@ -67,6 +67,7 @@ public class shopmanager : MonoBehaviour
                 sceneName = "Level 3";
                 break;
         }
+        Debug.Log("Loading scene: " + sceneName);
         SceneManager.LoadScene(sceneName);
     }
 

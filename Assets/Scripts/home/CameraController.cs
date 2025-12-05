@@ -62,5 +62,6 @@ public class CameraController : MonoBehaviour
     {
         // currentIndex is 0-based, nowstage is 1-based.
         data.nowstage = currentIndex + 1;
+        Debug.Log("nowstage: " + data.nowstage);
     }
 }
