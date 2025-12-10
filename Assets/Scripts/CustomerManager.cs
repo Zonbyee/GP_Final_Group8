@@ -152,6 +152,10 @@ public class CustomerManager : MonoBehaviour
             Debug.Log("Shake Shake Shake!");
         }
 
+        data.money -= 100;
+        data.penaltyKill += 100;   // 🔸記錄殺顧客罰款
+        if (data.money < 0) data.money = 0;
+
         // 等待粒子效果播放完成
         yield return new WaitForSeconds(1.0f);
 
@@ -242,10 +246,7 @@ public class CustomerManager : MonoBehaviour
         }
         else
         {
-            data.ingreds_data newIngredient = new data.ingreds_data(ingredientName)
-            {
-                quantity = 1
-            };
+            data.ingreds_data newIngredient = new data.ingreds_data(ingredientName, 1);
             data.inbag.Add(newIngredient);
         }
 
