@@ -51,7 +51,9 @@ public class homemanager : MonoBehaviour
         }
 
         //data.nowstage = 1;
-        SceneManager.LoadScene("Shopping");
+        //SceneManager.LoadScene("Shopping");
+        IrisTransitionCutout.Instance.LoadSceneWithIris("Shopping");
+
     }
 
     // 顯示關卡鎖定提示彈窗
