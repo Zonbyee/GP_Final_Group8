@@ -3,11 +3,6 @@ using UnityEngine;
 
 public static class MealTable
 {
-    // 特殊類型號碼（用於 "Any Burger", "Any Sandwich", "Any Pizza"）
-    public const int ANY_BURGER = -1;
-    public const int ANY_SANDWICH = -2;
-    public const int ANY_PIZZA = -3;
-
     public static Dictionary<string, int> MealMap = new Dictionary<string, int>()
     {
         {"beefburger", 0}, {"porkburger", 1}, {"salmonburger", 2}, {"shrimpburger", 3}, {"lobsterburger", 4}, {"steakburger", 5},
@@ -33,12 +28,7 @@ public static class MealTable
         {21, "something special..."},
 
         {22, "lobimp ?"}, {23, "some soup.."}, {24, "steak...with sauce"},
-        {25, "Chaos~!>?~!<"},
-
-        // Any 類型訂單
-        {ANY_BURGER, "Any burger...surprise me!"},
-        {ANY_SANDWICH, "Any sandwich is fine~"},
-        {ANY_PIZZA, "Give me any pizza!"}
+        {25, "Chaos~!>?~!<"}
     };
 
     // 🔹 每一道料理的售價（自己改成你要的數字）
@@ -101,31 +91,13 @@ public static class MealTable
         return pf;
     }
 
-    // 檢查餐點是否符合期望的類型（支援 Any Burger/Sandwich/Pizza）
+    // 檢查餐點是否符合期望的類型
     public static bool IsMealMatch(string foodName, int expectedMealIndex)
     {
         // 直接匹配
         if (MealMap.TryGetValue(foodName, out int foodIndex) && foodIndex == expectedMealIndex)
         {
             return true;
-        }
-
-        // 檢查 "Any Burger"
-        if (expectedMealIndex == ANY_BURGER && foodName.EndsWith("burger"))
-        {
-            return MealMap.ContainsKey(foodName);
-        }
-
-        // 檢查 "Any Sandwich"
-        if (expectedMealIndex == ANY_SANDWICH && foodName.EndsWith("sandwich"))
-        {
-            return MealMap.ContainsKey(foodName);
-        }
-
-        // 檢查 "Any Pizza"
-        if (expectedMealIndex == ANY_PIZZA && foodName.EndsWith("pizza"))
-        {
-            return MealMap.ContainsKey(foodName);
         }
 
         return false;

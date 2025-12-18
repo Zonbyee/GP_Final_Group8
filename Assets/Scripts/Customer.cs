@@ -48,7 +48,9 @@ public class Customer : MonoBehaviour
     public float leaveDistanceThreshold = 3.0f;
 
     [Header("Waiting Settings")]
-    public float waitTimeLimit = 20f;
+    public float minWaitTime = 15f;
+    public float maxWaitTime = 30f;
+    private float waitTimeLimit;
     private float waitTimer = 0f;
     private bool isWaiting = false;
     private bool leftDueToTimeout = false;
@@ -313,6 +315,10 @@ public class Customer : MonoBehaviour
         Debug.Log($"[Customer] 已到達座位: {targetSpot.name}");
         targetSpot.OnCustomerArrived();
         ShowCorrectRecipe();
+
+        // 隨機生成等待時間（15-30秒）
+        waitTimeLimit = Random.Range(minWaitTime, maxWaitTime);
+        Debug.Log($"[Customer] 等待時間設定為: {waitTimeLimit:F1} 秒");
 
         // 開始等待計時
         isWaiting = true;

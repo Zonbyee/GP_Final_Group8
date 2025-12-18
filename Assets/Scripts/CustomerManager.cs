@@ -168,13 +168,10 @@ public class CustomerManager : MonoBehaviour
         Debug.Log($"[CustomerManager] Kill count today: {data.killCountToday}");
 
         // Check if 3 kills reached - switch to Home scene
-        if (data.killCountYesterday + data.killCountToday >= 3)
+        if (data.IsGameOver())
         {
             Debug.Log("[CustomerManager] 3 kills reached! Resetting game data and switching to Home scene...");
-            data.money = 1000;
-            data.inbag.Clear();
-            data.killCountToday = 0;
-            data.killCountYesterday = 0;
+            data.reset();
             SceneManager.LoadScene("Home");
             yield break;
         }

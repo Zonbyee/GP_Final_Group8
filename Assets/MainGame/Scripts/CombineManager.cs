@@ -75,100 +75,6 @@ public class CombineManager : MonoBehaviour
         }
     }
 
-    // 檢查是否為 "任意餐點" (Burger/Sandwich/Pizza) 並動態命名
-    private string TryMatchAnyMeal(List<string> ingredients)
-    {
-        // === 檢查 Burger ===
-        // 基礎配料：burgerbun + cheese + lettuce
-        bool hasBurgerBun = ingredients.Contains("burgerbun");
-        bool hasCheese = ingredients.Contains("cheese");
-        bool hasLettuce = ingredients.Contains("lettuce");
-
-        if (hasBurgerBun && hasCheese && hasLettuce && ingredients.Count >= 4)
-        {
-            List<string> extraIngredients = new List<string>();
-            foreach (string ingredient in ingredients)
-            {
-                if (ingredient != "burgerbun" && ingredient != "cheese" && ingredient != "lettuce")
-                {
-                    extraIngredients.Add(ingredient);
-                }
-            }
-
-            if (extraIngredients.Count > 0)
-            {
-                string extraPart = string.Join("", extraIngredients);
-                string burgerName = extraPart + "burger";
-
-                // 檢查是否在 MealTable 中存在
-                if (MealTable.MealMap.ContainsKey(burgerName))
-                {
-                    return burgerName;
-                }
-            }
-        }
-
-        // === 檢查 Sandwich ===
-        // 基礎配料：sandwich + mushroom
-        bool hasSandwich = ingredients.Contains("sandwich");
-        bool hasMushroom = ingredients.Contains("mushroom");
-
-        if (hasSandwich && hasMushroom && ingredients.Count >= 3)
-        {
-            List<string> extraIngredients = new List<string>();
-            foreach (string ingredient in ingredients)
-            {
-                if (ingredient != "sandwich" && ingredient != "mushroom")
-                {
-                    extraIngredients.Add(ingredient);
-                }
-            }
-
-            if (extraIngredients.Count > 0)
-            {
-                string extraPart = string.Join("", extraIngredients);
-                string sandwichName = extraPart + "sandwich";
-
-                // 檢查是否在 MealTable 中存在
-                if (MealTable.MealMap.ContainsKey(sandwichName))
-                {
-                    return sandwichName;
-                }
-            }
-        }
-
-        // === 檢查 Pizza ===
-        // 基礎配料：dough + cheese + oven
-        bool hasDough = ingredients.Contains("dough");
-        bool hasOven = ingredients.Contains("oven");
-        // cheese 已經在上面檢查過了
-
-        if (hasDough && hasCheese && hasOven && ingredients.Count >= 4)
-        {
-            List<string> extraIngredients = new List<string>();
-            foreach (string ingredient in ingredients)
-            {
-                if (ingredient != "dough" && ingredient != "cheese" && ingredient != "oven")
-                {
-                    extraIngredients.Add(ingredient);
-                }
-            }
-
-            if (extraIngredients.Count > 0)
-            {
-                string extraPart = string.Join("", extraIngredients);
-                string pizzaName = extraPart + "pizza";
-
-                // 檢查是否在 MealTable 中存在
-                if (MealTable.MealMap.ContainsKey(pizzaName))
-                {
-                    return pizzaName;
-                }
-            }
-        }
-
-        return null; // 不符合任何條件
-    }
 
     public void OnCombineButtonClicked()
     {
@@ -190,11 +96,6 @@ public class CombineManager : MonoBehaviour
         {
             if (resultName == null) resultName = resultbytype;
         }
-        else
-        {
-            // 檢查是否為 "任意餐點" (Burger/Sandwich/Pizza)
-            resultName = TryMatchAnyMeal(combineArea.ingredientsInArea);
-        }
 
         if (resultName != null)
         {
@@ -212,6 +113,26 @@ public class CombineManager : MonoBehaviour
             FoodCard card = newCard.GetComponent<FoodCard>();
             card.setup(resultName);
             card.foodName = resultName;
+
+            // 檢查是否為地獄料理並設置完成狀態
+            if (MealTable.MealMap.TryGetValue(resultName, out int mealId))
+            {
+                if (mealId == 16 || mealId == 17) // meatjuice or seafoodjuice
+                {
+                    data.hasCompletedStageHellCuisine[0] = true;
+                    Debug.Log("完成 Stage 1 地獄料理！");
+                }
+                else if (mealId == 21) // rawsealandpizza
+                {
+                    data.hasCompletedStageHellCuisine[1] = true;
+                    Debug.Log("完成 Stage 2 地獄料理！");
+                }
+                else if (mealId == 25) // chaos
+                {
+                    data.hasCompletedStageHellCuisine[2] = true;
+                    Debug.Log("完成 Stage 3 地獄料理！");
+                }
+            }
 
             // 4️⃣ 在合成區生成新卡
             // 4️⃣ 在合成區生成新卡（根據結果名稱決定用哪個 Prefab）
