@@ -15,6 +15,8 @@ public class AutoFlip : MonoBehaviour {
     public float textFadeDuration = 0.6f;   // ⭐ 文字淡入時間
     public TextMeshProUGUI[] pageTexts;
     public UnityEngine.UI.Image[] pageImages;
+    public UnityEngine.UI.Button[] recipeButtons;
+
 
 
     // Use this for initialization
@@ -79,6 +81,21 @@ public class AutoFlip : MonoBehaviour {
             c.a = 0;
             img.color = c;
         }
+        foreach (var b in recipeButtons)
+        {
+            if (b == null) continue;
+
+            b.interactable = false; // 先不能點
+
+            // 把按鈕本體 Image 透明
+            var img = b.GetComponent<UnityEngine.UI.Image>();
+            if (img != null)
+            {
+                var c = img.color;
+                c.a = 0;
+                img.color = c;
+            }
+        }
     }
 
 
@@ -114,8 +131,29 @@ public class AutoFlip : MonoBehaviour {
                 img.color = c;
             }
 
+            foreach (var b in recipeButtons)
+            {
+                if (b == null) continue;
+
+                var img = b.GetComponent<UnityEngine.UI.Image>();
+                if (img != null)
+                {
+                    var c = img.color;
+                    c.a = alpha;
+                    img.color = c;
+                }
+            }
+
+
             yield return null;
         }
+        
+        foreach (var b in recipeButtons)
+        {
+            if (b == null) continue;
+            b.interactable = true;
+        }
+
     }
 
     void PageFlipped()
