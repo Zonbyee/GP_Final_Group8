@@ -55,7 +55,6 @@ public class CustomerManager : MonoBehaviour
         HandlePlayerInput();
         HandleCustomerSpawning();
         HandlePanicCleanup();
-        HandleCheatMode();
     }
 
     // ==================== INPUT HANDLING ====================
@@ -655,50 +654,5 @@ public class CustomerManager : MonoBehaviour
         isAllSpotsFull = false;
         data.isPanicMode = 0;
         Debug.Log("[CustomerManager] All customers force removed. Panic mode deactivated!");
-    }
-
-    // ==================== CHEAT MODE ====================
-    private void HandleCheatMode()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ActivateCheatMode();
-        }
-    }
-
-    private void ActivateCheatMode()
-    {
-        Debug.Log("[CHEAT MODE] Activated! Unlocking all stages and adding ingredients...");
-
-        // 解鎖所有關卡
-        data.clearstage = 3;
-        Debug.Log("[CHEAT MODE] All stages unlocked!");
-
-        // 給予所有種類的食材各10個
-        string[] allIngredients = {
-            "burgerbun", "sandwich", "mushroom", "cheese",
-            "salmon", "lettuce", "beef", "pork",
-            "apple", "kiwi", "dough", "shrimp",
-            "tomato", "pineapple", "butter", "pepper",
-            "lobster", "steak", "doublesauce"
-        };
-
-        foreach (string ingredientName in allIngredients)
-        {
-            var existingIngredient = data.inbag.Find(x => x.name == ingredientName);
-
-            if (existingIngredient != null)
-            {
-                existingIngredient.quantity += 10;
-            }
-            else
-            {
-                data.ingreds_data newIngredient = new data.ingreds_data(ingredientName, 10);
-                data.inbag.Add(newIngredient);
-            }
-        }
-
-        RefreshInventoryUI();
-        Debug.Log("[CHEAT MODE] Added 10 of each ingredient!");
     }
 }
