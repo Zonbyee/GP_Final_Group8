@@ -61,36 +61,36 @@ public static class MealTable
     // 🔹 每一道料理的售價（自己改成你要的數字）
     public static Dictionary<int, int> MealPrice = new Dictionary<int, int>()
     {
-        {0, 200},   // beefburger
-        {1, 165},   // porkburger
-        {2, 180},   // salmonburger
-        {3, 180},   // shrimpburger
+        {0, 350},   // beefburger
+        {1, 300},   // porkburger
+        {2, 330},   // salmonburger
+        {3, 330},   // shrimpburger
         {4, 600},  // lobsterburger
-        {5, 200},  // steakburger
+        {5, 380},  // steakburger
 
-        {6, 170},   // beefsandwich
-        {7, 150},   // porksandwich
-        {8, 160},   // salmonsandwich
-        {9, 160},   // shrimpsandwich
+        {6, 330},   // beefsandwich
+        {7, 280},   // porksandwich
+        {8, 300},   // salmonsandwich
+        {9, 300},   // shrimpsandwich
         {10, 600}, // lobstersandwich
-        {11, 170}, // steaksandwich
+        {11, 350}, // steaksandwich
 
-        {12, 50},  // applesalad
-        {13, 200},  // kiwisalad
-        {14, 60},  // tomatosalad
-        {15, 50},  // pineapplesalad
+        {12, 200},  // applesalad
+        {13, 300},  // kiwisalad
+        {14, 200},  // tomatosalad
+        {15, 200},  // pineapplesalad
 
         {16, 600},  // meatjuice
         {17, 600},  // seafoodjuice
 
-        {18, 130},  // margheritapizza
-        {19, 160}, // hawaiipizza
-        {20, 170}, // seafoodpizza
+        {18, 300},  // margheritapizza
+        {19, 330}, // hawaiipizza
+        {20, 350}, // seafoodpizza
         {21, 600}, // rawsealandpizza
 
         {22, 600}, // grilllobimp
-        {23, 150},  // gumbo
-        {24, 180}, // doublesaucesteak
+        {23, 300},  // gumbo
+        {24, 320}, // doublesaucesteak
 
         {25, 999}  // chaos (想搞笑就超貴🤣)
     };

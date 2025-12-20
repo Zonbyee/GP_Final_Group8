@@ -50,12 +50,12 @@ public static class data
         }
     }
 
-    public static int money = 1000;
+    public static int money = 2000;
     public static int nowprise = 0;
 
     public static int daynumber = 1;
     // ▶ 一天開始時的金額
-    public static int dayStartMoney = 1000;
+    public static int dayStartMoney = 2000;
 
     // ▶ 今日收支細項
     public static int costIngredients = 0; // 買材料花費
@@ -125,12 +125,12 @@ public static class data
     // 重置遊戲數據到初始狀態
     public static void reset()
     {
-        money = 1000;
+        money = 2000;
         inbag.Clear();
         killCountToday = 0;
         killCountYesterday = 0;
         daynumber = 1;
-        dayStartMoney = 1000;
+        dayStartMoney = 2000;
         costIngredients = 0;
         incomeServe = 0;
         penaltyWrong = 0;
