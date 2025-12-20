@@ -45,20 +45,26 @@ public class IngredientSlot : MonoBehaviour, IPointerDownHandler
         Debug.Log($"點擊了食材槽：{ingredientName}，剩餘數量：{count}");
         if (count > 0)
         {
-            CreateNewCard();
+            CreateNewCard(eventData);
             count--;
             UpdateUI();
         }
     }
 
-    private void CreateNewCard()
+    private void CreateNewCard(PointerEventData eventData)
     {
         if (ingredientCardPrefab == null) return;
+
+        if (parentCanvas == null)
+        {
+            parentCanvas = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+        }
 
         GameObject newCard = Instantiate(ingredientCardPrefab, parentCanvas.transform);
         IngredientCard card = newCard.GetComponent<IngredientCard>();
         card.Setup(this, ingredientName);
-        card.transform.position = Mouse.current.position.ReadValue();
+        card.transform.position = eventData.position;
+        card.StartAutoDrag();
     }
 
     public void ReturnCard()
