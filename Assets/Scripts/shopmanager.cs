@@ -135,7 +135,19 @@ public class shopmanager : MonoBehaviour
     public void OnHintYes()
     {
         // 解鎖「當前關卡」的 hint
-        data.SetHintUnlocked(data.nowstage, true);
+        
+        switch (data.nowstage)
+        {
+            case 1:
+                data.hintUnlockedByStage[0] = true;
+                break;
+            case 2:
+                data.hintUnlockedByStage[1] = true;
+                break;
+            case 3:
+                data.hintUnlockedByStage[2] = true;
+                break;
+        }
 
         Debug.Log($"[Hint] Stage {data.nowstage} hint unlocked. Price = {data.hintPrice} (not charged yet)");
 

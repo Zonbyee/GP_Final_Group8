@@ -177,6 +177,33 @@ public bool unlockOnlyHell = true;
         {
             // 用 TryGetValue 更安全（避免 key 不存在直接炸）
             unlocked = illustdata.isunlocked.TryGetValue(recipeName, out bool ok) && ok;
+            switch (data.nowstage)
+            {
+                case 1:
+                    {
+                        if (data.hintUnlockedByStage[0] == true)
+                        {
+                            unlocked = true;
+                        }
+                    }
+                    break;
+                case 2:
+                    {
+                        if (data.hintUnlockedByStage[1] == true)
+                        {
+                            unlocked = true;
+                        }
+                    }
+                    break;
+                case 3:
+                    {
+                        if (data.hintUnlockedByStage[2] == true)
+                        {
+                            unlocked = true;
+                        }
+                    }
+                    break;
+            }
         }
 
         // ✅ 先清場：關掉所有右頁（包含 locked）
