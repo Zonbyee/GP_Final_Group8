@@ -63,6 +63,33 @@ public class LockedRecipeCard : MonoBehaviour
     public void Refresh()
     {
         bool unlocked = IsUnlocked(recipeName);
+        switch (data.nowstage)
+        {
+            case 1:
+                {
+                    if (data.hintUnlockedByStage[0] == true)
+                    {
+                        unlocked = true;
+                    }
+                }
+                break;
+            case 2:
+                {
+                    if (data.hintUnlockedByStage[1] == true)
+                    {
+                        unlocked = true;
+                    }
+                }
+                break;
+            case 3:
+                {
+                    if (data.hintUnlockedByStage[2] == true)
+                    {
+                        unlocked = true;
+                    }
+                }
+                break;
+        }
 
         // ⭐ 圖片只改顯示，不影響功能
         if (icon != null)
