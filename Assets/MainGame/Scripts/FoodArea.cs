@@ -74,6 +74,7 @@ public class FoodArea : MonoBehaviour, IDropHandler
             int price = MealTable.GetPrice(expectedMealIndex);
             data.money += price;
             data.incomeServe += price;
+            data.AddFoodSale(foodName, 1, price);
         }
         else
         {
