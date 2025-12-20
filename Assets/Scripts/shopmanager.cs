@@ -30,6 +30,8 @@ public class shopmanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // 開啟商店即為新的一天開始，先重置當日收支統計
+        data.BeginNewDay();
         show.text = "" + data.money;
         slider.value = data.bgmvol;
         bgm.volume = data.bgmvol;
@@ -90,7 +92,6 @@ public class shopmanager : MonoBehaviour
                 break;
         }
         Debug.Log("Loading scene: " + sceneName);
-        data.BeginNewDay();
         //SceneManager.LoadScene(sceneName);
         IrisTransitionCutout.Instance.LoadSceneWithIris(sceneName);
     }
@@ -206,7 +207,8 @@ public class shopmanager : MonoBehaviour
         if (data.money < totalprise) return;
         data.money -= totalprise;
         show.text = "" + data.money;
-        data.costIngredients += data.nowprise;   // 🔸記錄材料花費
+        data.costIngredients += totalprise;   // 🔸記錄材料花費
+        data.AddIngredientPurchase(nowbuyingitem, amount, totalprise);
 
         data.ingreds_data isexist = data.inbag.Find(x => x.name == nowbuyingitem);
         if (isexist != null)

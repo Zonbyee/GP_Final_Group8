@@ -38,6 +38,18 @@ public static class data
         }
     }
 
+    public class DailyItemStat
+    {
+        public int count;
+        public int totalAmount;
+
+        public void Add(int countDelta, int amountDelta)
+        {
+            count += countDelta;
+            totalAmount += amountDelta;
+        }
+    }
+
     public static int money = 1000;
     public static int nowprise = 0;
 
@@ -51,6 +63,8 @@ public static class data
     public static int penaltyWrong = 0; // 送錯 / 其他失誤扣錢
     public static int penaltyKill = 0; // 殺顧客扣錢
     public static int penaltyOther = 0; // 其他想加的懲罰
+    public static Dictionary<string, DailyItemStat> ingredientsBoughtToday = new Dictionary<string, DailyItemStat>();
+    public static Dictionary<string, DailyItemStat> foodsSoldToday = new Dictionary<string, DailyItemStat>();
     public static float bgmvol = 1f;
     public static List<ingreds_data> inbag = new List<ingreds_data>();
     public static int killCountToday = 0;
@@ -95,6 +109,8 @@ public static class data
         penaltyWrong = 0;
         penaltyKill = 0;
         penaltyOther = 0;
+        ingredientsBoughtToday.Clear();
+        foodsSoldToday.Clear();
 
         killCountYesterday = killCountToday;
         killCountToday = 0;
@@ -120,6 +136,8 @@ public static class data
         penaltyWrong = 0;
         penaltyKill = 0;
         penaltyOther = 0;
+        ingredientsBoughtToday.Clear();
+        foodsSoldToday.Clear();
         clearstage = 1;
         nowstage = 1;
         isPanicMode = 0;
@@ -165,5 +183,27 @@ public static class data
         sp = Resources.Load<Sprite>(path);
         if (sp != null) piccache[path] = sp;
         return sp;
+    }
+
+    public static void AddIngredientPurchase(string name, int quantity, int totalCost)
+    {
+        if (!ingredientsBoughtToday.TryGetValue(name, out DailyItemStat stat))
+        {
+            stat = new DailyItemStat();
+            ingredientsBoughtToday[name] = stat;
+        }
+
+        stat.Add(quantity, totalCost);
+    }
+
+    public static void AddFoodSale(string name, int quantity, int totalIncome)
+    {
+        if (!foodsSoldToday.TryGetValue(name, out DailyItemStat stat))
+        {
+            stat = new DailyItemStat();
+            foodsSoldToday[name] = stat;
+        }
+
+        stat.Add(quantity, totalIncome);
     }
 }
