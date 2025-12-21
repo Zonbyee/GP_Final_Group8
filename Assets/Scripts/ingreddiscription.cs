@@ -27,7 +27,11 @@ public static class ingreddiscription
         { "doublesauce", "yuck" },
 
         { "mixer", "make things together" },
-        { "oven", "hitttttt up" }
+        { "oven", "hitttttt up" },
+
+        { "fruit", "fresher the better" },
+        { "meat", "protein source" },
+        { "seafood", "from the sea" }
     };
 
     public static string getinfo(string tag)
