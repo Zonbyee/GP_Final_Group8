@@ -3386,6 +3386,10 @@ PrefabInstance:
       propertyPath: openDirection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 60975080292001492, guid: b19f88f8db5728649a27be356c91029a, type: 3}
+      propertyPath: useNavMeshLinkDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1910950242183567128, guid: b19f88f8db5728649a27be356c91029a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -3501,6 +3505,10 @@ PrefabInstance:
     - target: {fileID: 60975080292001492, guid: b19f88f8db5728649a27be356c91029a, type: 3}
       propertyPath: openDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 60975080292001492, guid: b19f88f8db5728649a27be356c91029a, type: 3}
+      propertyPath: useNavMeshLinkDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1910950242183567128, guid: b19f88f8db5728649a27be356c91029a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5271,10 +5279,10 @@ MonoBehaviour:
   - {fileID: 869767823}
   - {fileID: 869767822}
   - {fileID: 869767821}
-  minPanicStops: 2
-  maxPanicStops: 4
-  panicMoveSpeed: 5
-  panicPointOffset: 2
+  minPanicStops: 1
+  maxPanicStops: 3
+  panicMoveSpeed: 4
+  panicPointOffset: 1
   spotAKey: 49
   spotBKey: 50
   spotCKey: 51

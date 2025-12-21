@@ -3297,11 +3297,15 @@ MonoBehaviour:
   doorOuterPoints:
   - {fileID: 1334155830739777026}
   - {fileID: 8611048455352678820}
-  panicPoints: []
-  minPanicStops: 2
-  maxPanicStops: 4
-  panicMoveSpeed: 5
-  panicPointOffset: 2
+  panicPoints:
+  - {fileID: 2913902336416603752}
+  - {fileID: 9216659514837419748}
+  - {fileID: 1115757017037829349}
+  - {fileID: 5086397821786429605}
+  minPanicStops: 1
+  maxPanicStops: 3
+  panicMoveSpeed: 4
+  panicPointOffset: 1
   spotAKey: 49
   spotBKey: 50
   spotCKey: 51

@@ -31,6 +31,8 @@ public class AutomaticDoor : MonoBehaviour
     [Tooltip("觸發開門的標籤（通常是 'Customer' 或 'Player'）")]
     private List<string> triggerTags = new List<string> { "Customer" };
 
+    // NavMeshLink Detection 功能已移除，使用標準的 Collider 觸發偵測
+
     // 追蹤有多少個物體在觸發區域內
     private int objectsInTrigger = 0;
 
