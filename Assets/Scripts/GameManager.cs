@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         "press 1~5 to kill, and gain some ingred, but too often will have panalty"
     };
 
-    private float timer = 120f;
+    private float timer = 500f;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI guidetitle;

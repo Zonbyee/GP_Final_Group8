@@ -1010,8 +1010,8 @@ MonoBehaviour:
   waitTimerSlider: {fileID: 7897316980814943411}
   customerType: 3
   leaveDistanceThreshold: 3
-  minWaitTime: 15
-  maxWaitTime: 30
+  minWaitTime: 50
+  maxWaitTime: 70
 --- !u!54 &4921367891268245799
 Rigidbody:
   m_ObjectHideFlags: 0
