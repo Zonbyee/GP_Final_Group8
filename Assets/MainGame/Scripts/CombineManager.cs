@@ -57,7 +57,7 @@ public class CombineManager : MonoBehaviour
         {"apple", "apple"}, {"kiwi", "kiwi"}, {"tomato", "tomato"}, {"pineapple", "pineapple"},
         {"apple+mixer", "applejuice"}, {"kiwi+mixer", "kiwijuice"},
         {"mixer+tomato", "tomatojuice"}, {"mixer+pineapple", "pineapplejuice"},
-        {"lettuce+mixer", "vegetablejuice"}, {"fruit+vegetable+mixer", "frutablejuice"},
+        {"lettuce+mixer", "vegetablejuice"}, {"fruit+mixer+vegetable", "frutablejuice"},
         {"burgerbun+cheese+lettuce", "nmeatburger"},
         {"beef+burgerbun+cheese", "nletbeefbur"}, {"burgerbun+cheese+pork", "nletporkbur"}, {"burgerbun+cheese+steak", "nletsteakbur"},
         {"burgerbun+cheese+shrimp", "nletshrimpbur"}, {"burgerbun+cheese+salmon", "nletsalmonbur"}, {"burgerbun+cheese+lobster", "nletlobsterbur"},

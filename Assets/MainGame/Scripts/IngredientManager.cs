@@ -45,6 +45,8 @@ public class IngredientManager : MonoBehaviour
         // 根據 data.inbag 生成 Slot
         foreach (var ingredData in data.inbag)
         {
+            if (ingredData.quantity <= 0) continue; // 跳過數量為 0 的食材
+
             GameObject slotObj = Instantiate(gameslotprefeb, slotContainer);
             foodpic = slotObj.transform.Find("content").GetComponent<Image>();
             foodpic.sprite = data.GetSprite(ingredData.name);
