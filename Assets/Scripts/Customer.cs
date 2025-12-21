@@ -45,8 +45,8 @@ public class Customer : MonoBehaviour
     public float leaveDistanceThreshold = 3.0f;
 
     [Header("Waiting Settings")]
-    public float minWaitTime = 15f;
-    public float maxWaitTime = 30f;
+    public float minWaitTime = 50f;
+    public float maxWaitTime = 70f;
     private float waitTimeLimit;
     private float waitTimer = 0f;
     private bool isWaiting = false;
